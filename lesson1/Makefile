@@ -40,6 +40,9 @@ clean:
 run: all
 	x64sc -model ntsc -keymap 1 -autostartprgmode 1 build/main-c64.prg
 
+runbasic: 
+	x64sc -model ntsc -keymap 1 -autostartprgmode 1 numberguess.prg
+
 runc64: builddir clean
 	$(PCC) $(PCCARGS) -emu src/main-c64.p8
 
